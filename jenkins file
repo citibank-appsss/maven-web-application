@@ -10,17 +10,17 @@ node{
    }
    //build
    stage('build'){
-    sh"${mavenHome}/bin/mvn clean package"
+    sh "${mavenHome}/bin/mvn clean package"
    }
    
    
-   //'(execute sonarqube report')
+   //('execute sonarqube report')
    stage('executesonarqubereport'){
-   sh"${mavenHome}/bin/mvn sonar:sonar"
+   sh "${mavenHome}/bin/mvn sonar:sonar"
    }
    //upload artifacts into nexus
    stage('uploadartifactsintonexus'){
-    sh"${mavenHome}/bin/mvn deploy"   
+    sh "${mavenHome}/bin/mvn deploy"   
    }
    //deploy app into tomcat server
    stage('deployapp'){

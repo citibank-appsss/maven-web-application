@@ -3,7 +3,7 @@ node{
     echo "the job name is: ${env.JOB_NAME}"
     echo "the build number is: ${env.BUILD_NUMBER}"
     echo "the node name is: ${env.NODE_NAME}"
-    //properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), pipelineTriggers([pollSCM(' * * * * *')])])
+    
     //checkout code state
     stage('checkoutcode'){
    git branch: 'development', credentialsId: '16e0e0d3-a7b2-4e42-8c0a-da28a2e8962e', url: 'https://github.com/citibank-appsss/maven-web-application.git'     

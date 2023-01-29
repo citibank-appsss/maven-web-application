@@ -32,8 +32,8 @@ node {
    }//try closing
        
 
-   catch (e) {
-    currentBuild.result = "FAILED"
+   catch(e){
+    currentBuild.result = "FAILURE"
   } 
   finally {
     send slack notification(currentBuild.result)
@@ -42,7 +42,7 @@ node {
 //function for slack notification
 def slack notification(String buildStatus = 'STARTED') {
   // build status of null means successful
-  buildStatus =  buildStatus ?: 'SUCCESSFUL'
+  buildStatus =  buildStatus ?:'SUCCESSFUL'
 
   // Default values
   def colorName = 'RED'

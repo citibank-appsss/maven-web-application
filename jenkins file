@@ -16,7 +16,7 @@ node{
     sh "${mavenHome}/bin/mvn clean package"
    }
    
-   
+   /*
    //('execute sonarqube report')
    stage('executesonarqubereport'){
    sh "${mavenHome}/bin/mvn sonar:sonar"
@@ -33,6 +33,7 @@ node{
     sh "scp -o stricthostkeychecking=no target/maven-web-application.war ec2-user@172.31.47.213:/opt/apache-tomcat-9.0.70/webapps/"
 }
    }
+   */
 }//try closing
     catch (e) {
     currentBuild.result = "FAILURE"

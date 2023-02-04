@@ -101,11 +101,11 @@
 	      <url>http://172.31.11.199:9980/mithuntechnologies/repository/citibank-release/</url>
 	    </repository>
 	    
-	    <snpshotRepository>
+	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Snapshot Nexus Repository </name>
+	      <name>mithuntechnologies Snapshot Nexus Repository </name>
 	      <url>http://172.31.11.199:9980/mithuntechnologies/repository/citibank-snpshot/</url>
-	    </snpshotRepository>
+	    </snapshotRepository>
 	    
 	</distributionManagement>
 	
